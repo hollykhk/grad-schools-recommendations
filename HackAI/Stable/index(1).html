@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Grad Student Suggestions</title>
+
+</head>
+<body>
+    <h2>Grad Student Suggestions</h2>
+    <form id="questions" action = "/submit" method = "POST">
+        
+        <!-- University -->
+        <h4>University</h4>
+        <select name="university">
+          <option value="uni1">Uni 1</option>
+          <option value="uni2">Uni 2</option>
+          <option value="uni3">Uni 3</option>
+          <option value="uni4">Uni 4</option>
+          <option value="uni5">Uni 5</option>
+        </select><br><br>
+
+        <!-- TOEFL -->
+        International Student?
+        <input type="checkbox" name="intl" id="intl" onclick="showIntl()" checked>
+        <br>
+        <div id="toefls">
+          <h4>TOEFL</h4>
+          TOEFL Speaking Score:
+          <input type="number" name="toeflss" min="0" max="30" value="0">
+          <br>
+          TOEFL Reading Score:
+          <input type="number" name="toeflrs" min="0" max="30" value="0">
+          <br>
+          TOEFL Writing Score:
+          <input type="number" name="toeflws" min="0" max="30" value="0">
+          <br>
+          TOEFL Listening Score:
+          <input type="number" name="toeflls" min="0" max="30" value="0">
+        </div>
+
+        <!-- GRE -->
+        <h4>GRE</h4>
+        GRE Verbal Reasoning Score:
+        <input type="number" name="grevs" min="130" max="170" value="130">
+        <br>
+        GRE Quantitative Reasoning Score:
+        <input type="number" name="greqs" min="130" max="170" value="130">
+        <br>
+        GRE Analytical Writing Score:
+        <input type="number" name="greas" min="0.0" max="6.0" step="0.5" value="0">
+
+        <!-- Work experience -->
+        <h4>Work experience?</h4>
+        <input type="checkbox" name="work">
+
+        <!-- Cost -->
+        <h4>Cost?</h4>
+        <div id="cost_preference">
+            <input type="radio" name="cost" value="high">$$$<br>
+            <input type="radio" name="cost" value="medium">$$<br>
+            <input type="radio" name="cost" value="low" checked>$
+        </div>
+
+        <!-- Semester -->
+        <h4>Semester?</h4>
+        <div id="semester">
+            <input type="radio" name="semester" value="fall" checked>Fall<br>
+            <input type="radio" name="semester" value="spring">Spring<br>
+            <input type="radio" name="semester" value="summer">Summer<br>
+        </div>
+        
+        <h4>Subjects taken?</h4>
+        	<input type="checkbox" name="ai" id="ai">AI<br>
+        	<input type="checkbox" name="ds" id="ds">DS<br>
+        	<input type="checkbox" name="dm" id="dm">DM
+    	<br><br>
+        
+        <input type="submit" value="Get Suggestions"></button>
+    </form>
+
+    <script src="{{ url_for('static', filename='meme.js') }}"></script>
+</body>
+

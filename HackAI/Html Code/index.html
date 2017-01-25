@@ -1,0 +1,151 @@
+<div ng-controller="memeCtrl">
+    <h2>Grad Student Suggestions</h2>
+
+	<!-- University name --->
+	<div class="row">
+		<div class="col-md-3">
+			<h4>University</h4>
+		</div>
+		<div class="col-md-4">
+			<select class="form-control" id="university">
+				<option value="uni1">Uni 1</option>
+				<option value="uni2">Uni 2</option>
+				<option value="uni3">Uni 3</option>
+				<option value="uni4">Uni 4</option>
+				<option value="uni5">Uni 5</option>
+			</select>
+		</div>
+	</div>
+	
+	<!-- International Student -->
+	<div class="row">
+		<div class="col-md-3">
+			<h4>International Student?</h4>
+		</div>
+		<div class="col-md-4">
+			<input type="checkbox" id="intl" ng-click="showIntl()">
+		</div>
+	</div>
+	
+	
+	<!-- TOEFL -->
+	<div class="row" id="toefls">
+		<div class="col-md-3">
+			<h4>TOEFL</h4>
+		</div>
+		<div class="col-md-4">
+		
+			<div class="row">
+				<div class="col-sm-6 pull-left"><label>Speaking Score: </label></div>
+				<div class="col-sm-6">
+					<input type="number" id="toeflss" min="0" max="30" value="0">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6 pull-left"><label>Reading Score: </label></div>
+				<div class="col-sm-6">
+					<input type="number" id="toeflrs" min="0" max="30" value="0">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6 pull-left"><label>Writing Score: </label></div>
+				<div class="col-sm-6">
+					<input type="number" id="toeflws" min="0" max="30" value="0">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6 pull-left"><label>Listening Score: </label></div>
+				<div class="col-sm-6">
+					<input type="number" id="toeflls" min="0" max="30" value="0">
+				</div>
+			</div>			
+		</div>
+	</div>
+	</br>
+	
+	<!-- GRE -->
+	<div class="row">
+		<div class="col-md-3">
+			<h4>GRE</h4>
+		</div>
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-sm-6 pull-left"><label>Verbal Reasoning Score: </label></div>
+				<div class="col-sm-6">
+					<input type="number" id="grevs" min="130" max="170" value="130">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 pull-left"><label>Quantitative Reasoning Score: </label></div>
+				<div class="col-sm-6">
+					<input type="number" id="greqs" min="130" max="170" value="130">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 pull-left"><label>Analytical Writing Score: </label></div>
+				<div class="col-sm-6">
+					<input type="number" id="greas" min="0.0" max="6.0" step="0.5" value="0">
+				</div>
+			</div>
+		</div>
+	</div>
+	</br>
+	
+	<!-- Work experience -->
+	<div class="row">
+		<div class="col-md-3">
+			<h4>Work experience?</h4>
+		</div>
+		<div class="col-md-4">
+			<input type="checkbox" id="work">
+		</div>
+	</div>
+	
+	
+	<!-- Cost -->
+	<div class="row">
+		<div class="col-md-3">
+			<h4>Cost?</h4>
+		</div>
+		<div class="col-md-4">
+			<input type="radio" name="cost" id="expensive">$$$<br>
+			<input type="radio" name="cost" id="cheaper">$$<br>
+			<input type="radio" name="cost" checked="checked" id="cheapest">$
+		</div>
+	</div>
+	
+	
+	<!-- Semester -->
+	<div class="row">
+		<div class="col-md-3">
+			<h4>Semester?</h4>
+		</div>
+		<div class="col-md-4">
+			<input type="radio" name="semester" checked="checked" id="fall">Fall<br>
+			<input type="radio" name="semester" id="spring">Spring<br>
+			<input type="radio" name="semester" id="summer">Summer</br>
+		</div>
+	</div>
+	
+	<!-- Semester -->
+	<div class="row">
+		<div class="col-md-3">
+			<h4>Subjects taken?</h4>
+		</div>
+		<div class="col-md-4">
+			<input type="checkbox" name="subject" id="ai">AI<br>
+			<input type="checkbox" name="subject" id="ds">DS<br>
+			<input type="checkbox" name="subject" id="dm">DM</br>
+		</div>
+	</div>
+	
+	<!-- Semester -->
+	<div class="row">
+		<div class="col-md-4">
+			<input type="submit" value="Get Suggestions" ng-click="generateCSV()"></br>
+		</div>
+	</div>
+</div>
