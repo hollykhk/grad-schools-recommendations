@@ -1,5 +1,5 @@
-This directory contains client-side programming files.
+This directory contains some of client-side programming files for the Artificial Intelligence Project.
 
-HTML
-CSS
-JavaScript
+HTML - In the directory of 'templates'
+CSS - In this directory of 'client-side'
+JavaScript - In this directory of 'client-side'
