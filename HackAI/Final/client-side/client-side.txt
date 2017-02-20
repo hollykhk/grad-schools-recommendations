@@ -1,0 +1,5 @@
+This directory contains client-side programming files.
+
+HTML
+CSS
+JavaScript
